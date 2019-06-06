@@ -7,8 +7,10 @@
     <packageSourceUrl>https://github.com/n3rd4i/3dduke-shareware.git</packageSourceUrl>
     <owners>n3rd4i</owners>
     <authors>3d Realms</authors>
-    <projectUrl>https://wiki.eduke32.com/wiki/Installation_and_configuration</projectUrl>
+    <projectUrl>https://3drealms.com/catalog/duke-nukem-3d_27/</projectUrl>
     <licenseUrl>https://wiki.eduke32.com/wiki/Installation_and_configuration</licenseUrl>
+    <iconUrl>http://eduke32.com/images/eduke32.png</iconUrl>
+    <docsUrl>http://legacy.3drealms.com/tech/manuals/Duke3D%201.3d.pdf</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>3dduke-shareware 3dduke dukenukem</tags>
     <summary>Duke Nukem 3D Shareware</summary>

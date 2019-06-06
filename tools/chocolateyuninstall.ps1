@@ -1,6 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
-$installLocation = "$ENV:LocalAppData\Programs\Duke Nukem 3D Shareware"
-$shortcutPath = "$ENV:UserProfile\Desktop\Duke Nukem 3D Shareware.lnk"
+$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+. "$toolsDir\commonEnv.ps1"
+
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   softwareName  = '3dduke-shareware*'  #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
@@ -25,5 +26,5 @@ if ($key.Count -eq 1) {
   Write-Warning "Please alert package maintainer the following keys were matched:"
   $key | % {Write-Warning "- $($_.DisplayName)"}
 }
+Remove-Item $shortcutDesktop -force
 Remove-Item $installLocation -exclude *.ini -recurse -force
-Remove-Item $shortcutPath -force
