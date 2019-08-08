@@ -8,12 +8,12 @@ $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   unzipLocation = $installLocation
   url           = $url
-  softwareName  = '3dduke-shareware*' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
-  checksum      = 'AF2D24A2FF71DD10B0118AADCBF95831'
-  checksumType  = 'md5' #default is md5, can also be sha1, sha256 or sha512
+  softwareName  = '3dduke-shareware*'
+  checksum      = '3FCDC3CB4C16E44A6A15F9A916AE9D2F131DC6297B324FBD656DD404F2050DEC'
+  checksumType  = 'sha256'
 }
-Install-ChocolateyZipPackage @packageArgs # https://chocolatey.org/docs/helpers-install-chocolatey-package
+Install-ChocolateyZipPackage @packageArgs
+
 Install-ChocolateyShortcut -ShortcutFilePath "$shortcutDesktop" `
-  -TargetPath "$engineLocation\eduke32.exe" `
-  -IconLocation "$engineLocation\eduke32.exe" `
+  -TargetPath "$(Join-Path $engineLocation eduke32).exe" `
   -WorkingDirectory "$installLocation"

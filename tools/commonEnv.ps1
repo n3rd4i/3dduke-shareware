@@ -1,2 +1,3 @@
-$installLocation = "$ENV:LocalAppData\Programs\Duke Nukem 3D Shareware"
-$shortcutDesktop = "$ENV:UserProfile\Desktop\Duke Nukem 3D Shareware.lnk"
+$GameName = 'Duke Nukem 3D Shareware'
+$installLocation = "$(Join-Path $ENV:LocalAppData\Programs $GameName)"
+$shortcutDesktop = "$(Join-Path $ENV:UserProfile\Desktop $GameName).lnk"
